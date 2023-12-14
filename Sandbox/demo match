@@ -1,0 +1,9 @@
+
+gender = ...
+match gender:
+    case 'm':
+        print('man')
+    case 'f' | 'v':
+        print('woman')
+    case _:
+        print('other')
