@@ -11,7 +11,13 @@ number_of_guesses = 0
 while True:
 
     first_or_next = 'first' if number_of_guesses == 0 else 'next'
-    guess = int(input(f'What is your {first_or_next} guess? '))
+    user_input = input(f'What is your {first_or_next} guess? ')
+
+    if user_input.isnumeric():
+        guess = int(user_input)
+    else:
+        print('That is not a number')
+        continue
 
     number_of_guesses += 1
 

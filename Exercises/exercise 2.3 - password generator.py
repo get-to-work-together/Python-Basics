@@ -8,10 +8,10 @@ n_numbers = 1
 n_special = 1
 n_extra = max(0, minimum_length - n_lowercase - n_uppercase - n_numbers - n_special)
 
-# LOWERCASE_CHARACTERS = string.ascii_uppercase
-# UPPERCASE_CHARACTERS = string.ascii_lowercase
-# NUMBER_CHARACTERS = string.digits
-# SPECIAL_CHARACTERS = string.punctuation
+LOWERCASE_CHARACTERS = string.ascii_uppercase
+UPPERCASE_CHARACTERS = string.ascii_lowercase
+NUMBER_CHARACTERS = string.digits
+SPECIAL_CHARACTERS = string.punctuation
 
 # or
 
@@ -31,6 +31,8 @@ extra = random.choices(EXTRA_CHARACTERS, k = n_extra)
 all_characters = lowercase + uppercase + numbers + special + extra
 
 random.shuffle(all_characters)
+
+random.sample(all_characters, k = len(all_characters))
 
 password = ''.join(all_characters)
 

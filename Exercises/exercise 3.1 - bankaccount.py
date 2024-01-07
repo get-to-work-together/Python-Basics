@@ -1,38 +1,18 @@
 class BankAccount:
 
-    # classwide attribute
-    __slots__ = ('_holder', '_number', '_balance')
-    currency = '€'
-
     def __init__(self, number, holder, balance = 0):
         self._holder = holder
         self._number = number
         self._balance = balance
 
-    def __str__(self):
-        return f'Bankaccount: {self._number} - {self._holder}, balance = {BankAccount.currency}{self._balance}.'
+    @property
+    def balance(self):
+        return self._balance
 
-    def __repr__(self):
-        return f'Bankaccount("{self._number}", "{self._holder}", {self._balance})'
-
-    def __eq__(self, other):
-        return self._balance == other._balance
-
-    def __ne__(self, other):
-        return self._balance != other._balance
-
-    def __gt__(self, other):
-        return self._balance > other._balance
-
-    def __ge__(self, other):
-        return self._balance >= other._balance
-
-    def __lt__(self, other):
-        return self._balance < other._balance
-
-    def __le__(self, other):
-        return self._balance <= other._balance
-
+    @balance.setter
+    def balance(self, value):
+        if value > 0:
+            self._balance = value
 
     def withdraw(self, amount):
         self._balance -= amount
@@ -43,15 +23,7 @@ class BankAccount:
         print(f'Deposit of €{amount}')
 
     def get_info(self):
-        return f'Bankaccount with number {self._number} belongs to {self._holder} has a balance of {BankAccount.currency}{self._balance}.'
-
-    @classmethod
-    def change_currency(cls, currency):
-        cls.currency = currency
-
-    @staticmethod
-    def change_currency(currency):
-        BankAccount.currency = currency
+        return f'Bankaccount with number {self._number} belongs to {self._holder} has a balance of €{self._balance}.'
 
 
 # ---------------------------------------------------------
@@ -60,11 +32,6 @@ if __name__ == '__main__':
 
     acc1 = BankAccount('NL01ABCD0234567890', 'Peter')
     acc2 = BankAccount('NL01ABCD0234567777', 'Guido', balance = 1000)
-
-    print(repr(acc1))
-    print(str(acc1))
-    print(repr(acc2))
-    print(str(acc2))
 
     print(acc1.get_info())
     print(acc2.get_info())
@@ -80,4 +47,7 @@ if __name__ == '__main__':
     print(acc1.get_info())
     print(acc2.get_info())
 
-    print(acc1 > acc2)
+    print( acc1.balance )
+    acc1.balance = 1000000
+
+    print(acc1.get_info())

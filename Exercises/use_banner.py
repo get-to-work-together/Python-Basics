@@ -1,4 +1,6 @@
 import banner
-import random
+import sys
 
-banner.banner('There you go!')
+banner.banner('There you go!', '#')
+
+print(sys.path)

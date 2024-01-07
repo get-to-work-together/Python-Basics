@@ -1,5 +1,12 @@
+gender = 'm'
 
-d = {'nl': '+31', 'b': '+32', 'uk': '+44', 'f': '+33'}
+if gender.lower() == 'm':
+    print('Dear Sir.')
 
-for k, v in d.items():
-    print(f'{k:12}: {v}')
+elif gender.lower() == 'f':
+    print('Dear madam.')
+
+else:
+    print('Dear friend.')
+
+print('How do you do?')

@@ -8,7 +8,7 @@ with open(filename, 'r') as f:
 
     for d in reader:
 
-        if d['city'] in ('Montreal', 'Vancouver'):
+        if d['city'] in ('Montreal', ):
 
             print('%-15s %-15s %-35s %-25s' %
                   (d['first_name'], d['last_name'], d['email'], d['city']))

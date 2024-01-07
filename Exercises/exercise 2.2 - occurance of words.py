@@ -1,3 +1,6 @@
+import string
+
+
 s = r"""\
 Dé plek voor Smart Industry
 Brainport Industries Campus is een unieke locatie in de Brainport regio, waar meer dan 50 bedrijven in de hightech maakindustrie en 3 onderwijsinstellingen zijn gevestigd. Smart Industry komt hier letterlijk en figuurlijk van de grond, in een geheel circulair gebouw dat modulair is opgezet.
@@ -7,17 +10,9 @@ Het is dé plek waar de hightech maakindustrie elkaar ontmoet, waar bedrijven le
 Behalve kennis en ervaring worden hier ook faciliteiten gedeeld om te produceren en te innoveren. Samen geven we vorm aan het innovatieprogramma Fabriek van de Toekomst voor de high tech maakindustrie.
 """
 
-# clean up
-
-# s = s.lower().replace('.', '').replace(',', '').replace('(', '').replace(')', '')
-#
-# or
-# s = s.lower().translate(str.maketrans('', '', '.,(){}[]/\|#&'))
-#
-# or
-
-import string
-s = s.lower().translate(str.maketrans('é', 'e', string.punctuation))
+s = s.lower().translate(str.maketrans('áäâàéëêèíïìîóöôòúüûù',
+                                      'aaaaeeeeiiiioooouuuu',
+                                      string.punctuation))
 
 words = s.split()
 
@@ -27,7 +22,10 @@ d = dict()
 for word in unique_words:
     d[word] = words.count(word)
 
-for word, n in sorted(d.items(), key = lambda item: item[1]):
+def get_second(item):
+    return item[1]
+
+for word, n in sorted(d.items(), key = get_second, reverse=True):
     print(f'{word:25}: {n:3} {"*" * n}')
 
 

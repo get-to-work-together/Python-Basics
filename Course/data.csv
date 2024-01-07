@@ -1,8 +1,5 @@
-name;city;number
-Peter;Lhee;98789
-Eddy;Eindhoven;89798
-Yan;Eindhoven;8907987
-Malan;Eindhoven;4556
-Aproova;Veldhoven;23342
-Can;Best;0
-Frank;Eindhoven;0
+name,city,number
+Peter Anema,Lhee,peter@tip.nl
+Guido van Rossum,Lhee,peter@tip.nl
+Gamas Yeah,Lhee,peter@tip.nl
+Max OK,Lhee,peter@tip.nl
