@@ -22,9 +22,9 @@ except Exception as err:
 else:
     if (response.status_code == 200):
 
-        body = response.text
+        content = response.text
 
-        print(body)
+        print(content)
 
         decoded = response.json()
 

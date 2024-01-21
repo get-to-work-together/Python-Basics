@@ -26,6 +26,14 @@ print(year, is_leapyear)
 
 
 
+
+
+
+
+
+
+
+
 can_divide_by_4 = year % 4 == 0
 can_divide_by_100 = year % 100 == 0
 can_divide_by_400 = year % 400 == 0

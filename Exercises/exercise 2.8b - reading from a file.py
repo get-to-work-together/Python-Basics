@@ -1,13 +1,22 @@
-filename = 'demo_open.txt'
+import sys
 
-with open(filename) as f:
+filename = 'demo_open.txtX'
 
-    headers = f.readline().rstrip('\n').split(',')
+try:
+    with open(filename) as f:
 
-    for line in f:
-        columns = line.rstrip('\n').split(',')
+        headers = f.readline().rstrip('\n').split(',')
 
-        d = dict(zip(headers, columns))
+        for linenr, line in enumerate(f, start=2):
+            line = line.rstrip('\n')
+            columns = line.split(',')
 
-        if d['ID'] == '1003':
-            print(d)
+            d = dict(zip(headers, columns))
+
+            if d['ID'] == '1003':
+                print(f'{linenr:3}:{line}')
+
+except FileNotFoundError:
+    print(f'Can not find file: {filename}')
+    sys.exit(-1)
+    

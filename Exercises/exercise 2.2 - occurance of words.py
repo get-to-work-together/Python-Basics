@@ -1,6 +1,5 @@
 import string
 
-
 s = r"""\
 Dé plek voor Smart Industry
 Brainport Industries Campus is een unieke locatie in de Brainport regio, waar meer dan 50 bedrijven in de hightech maakindustrie en 3 onderwijsinstellingen zijn gevestigd. Smart Industry komt hier letterlijk en figuurlijk van de grond, in een geheel circulair gebouw dat modulair is opgezet.
@@ -25,7 +24,7 @@ for word in unique_words:
 def get_second(item):
     return item[1]
 
-for word, n in sorted(d.items(), key = get_second, reverse=True):
+for word, n in sorted(d.items(), key = get_second, reverse = True):
     print(f'{word:25}: {n:3} {"*" * n}')
 
 

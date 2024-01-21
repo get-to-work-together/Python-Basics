@@ -1,10 +1,16 @@
 
-class Person:
+class Person(object):
 
     def __init__(self, name, residence):
-        self._name = name.capitalize()
+        self._name = name
         self._residence = residence
 
+    def __repr__(self):
+        return f'Person("{self._name}", "{self._residence}")'
+
+    def __str__(self):
+        return f'Person: {self._name} with residence {self._residence}'
+        
     def tell(self):
         print(f'I am {self._name} and I live in {self._residence}.')
 
@@ -14,9 +20,13 @@ class Person:
 
 class Customer(Person):
 
-    def tell(self):
-        print(f'I am {self._name} and I am a customer.')
+    def __init__(self, name, residence, customer_number):
+        super().__init__(name, residence)
+        self._customer_number = customer_number
 
+    def tell(self):
+        print(f'I am a customer and my name is {self._name}. Nr {self._customer_number}')
+        
 
 
 # -------------------------------
@@ -27,6 +37,10 @@ p1.tell()
 p1.move('Eindhoven')
 p1.tell()
 
+print(str(p1))
+print(repr(p1))
 
-p2 = Customer('Joost', 'Eindhoven')
-p2.tell()
+print(p1)
+
+cust1 = Customer('Aneesh', 'Lhee', 'VIP000450')
+cust1.tell()

@@ -6,9 +6,6 @@ class Car:
         self._color = color
         self._mileage = mileage
 
-    def __del__(self):
-        print('This car has been demolished.')
-
     def drive(self, km):
         self._mileage += km
 
