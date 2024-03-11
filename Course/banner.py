@@ -9,4 +9,3 @@ def banner(text, c = '*'):
 if __name__ == '__main__':
 
     print('I am module banner')
-    print(__name__)
