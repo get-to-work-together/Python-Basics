@@ -9,4 +9,8 @@ while True:
         break
 
 print('\nThe entered names are:')
-print(names)
+
+names.sort()
+
+for name in names:
+    print(name)

@@ -21,10 +21,12 @@ d = dict()
 for word in unique_words:
     d[word] = words.count(word)
 
+
 def get_second(item):
     return item[1]
 
-for word, n in sorted(d.items(), key = get_second, reverse = True):
+
+for word, n in sorted(d.items(), key = get_second, reverse=True):
     print(f'{word:25}: {n:3} {"*" * n}')
 
 

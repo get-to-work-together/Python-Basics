@@ -3,19 +3,15 @@ from timeit import timeit
 
 def function1():
     c = number in l
-    c = number in l
 
 def function2():
-    c = number in t
     c = number in t
 
 def function3():
     c = number in s
-    c = number in s
 
 def function4():
     s2 = set(l)
-    c = number in s2
     c = number in s2
 
 if __name__ == '__main__':

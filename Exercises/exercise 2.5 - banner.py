@@ -7,7 +7,7 @@ def banner(text: str) -> None:
 
 
 
-def banner(text, c = '*'):
+def banner(text: str, c: str = '*') -> None:
     """Print the text as a banner"""
     n = len(text)
     print(c * (n + 6))
@@ -56,4 +56,4 @@ if __name__ == '__main__':
 
     name = input('What is your name? : ')
 
-    print( create_banner(name, '#') )
+    banner(name, '$')

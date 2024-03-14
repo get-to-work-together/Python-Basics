@@ -6,13 +6,13 @@ import math
 n = 1000000
 
 total = 0.0
-add = True
+add_or_subtract = True
 for i in range(1, n, 2):
-    if add:
+    if add_or_subtract:
         total += 1/i
     else:
         total -= 1/i
-    add = not add
+    add_or_subtract = not add_or_subtract
 
 pi = total * 4
 

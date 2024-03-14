@@ -1,26 +1,31 @@
-# Exercise 5.6 from Crash Course for Python
-
-age = int(input('What age? : '))
-
-if age < 2:
-    print('A baby')
-
-elif age < 4:
-    print('A toddler')
-
-elif age >= 4 and age < 13:
-    print('A kid')
-
-elif 13 <= age < 20:
-    print('A teenager')
-
-elif age in range(20, 65):
-    print('An adult')
-
-else:
-    print('An elder')
+import sys
 
 
+try:
+
+    age = int(input('What age? : '))
+
+    if age < 2:
+        print('A baby')
+
+    elif age < 4:
+        print('A toddler')
+
+    elif age >= 4 and age < 13:
+        print('A kid')
+
+    elif 13 <= age < 20:
+        print('A teenager')
+
+    elif age in range(20, 65):
+        print('An adult')
+
+    else:
+        print('An elder')
+
+except ValueError:
+    print('That is not a number')
+    sys.exit(-1)
 
 
 
