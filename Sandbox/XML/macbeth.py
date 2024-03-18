@@ -36,6 +36,8 @@ scenes = root.findall('.//SCENE/TITLE')
 for s in scenes:
     print(s.text)
 
+sys.exit()
+
 
 print('\n------ SPEECHES BY DUNCAN -------------------------\n')
 
@@ -44,8 +46,6 @@ for s in speeches:
     for l in s.findall('LINE'):
         print(l.text)
     print()
-
-sys.exit()
 
 print('\n------ SPEECH WITH MOST LINES ---------------------\n')
     

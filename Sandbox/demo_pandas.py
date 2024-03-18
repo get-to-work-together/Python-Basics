@@ -1,13 +1,12 @@
+#!/usr/bin/python
+
 import os
 import pandas as pd
 
-directory = '..'
+filename = 'ca-500.csv'
 
-filename_application = ''
-filename_requisition = ''
-filename_history = ''
+df = pd.read_csv(filename, sep = ';')
 
-df_application = pd.read_csv(os.path.join([directory, filename_application]))
-df_requisition = pd.read_csv(os.path.join([directory, filename_requisition]))
-df_history = pd.read_csv(os.path.join([directory, filename_history]))
+df = df.query('city=="Montreal"')
 
+print(df[['first_name', 'last_name', 'city']])
