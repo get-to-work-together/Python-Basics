@@ -11,7 +11,6 @@ print('First three characters:', s[:3])
 
 print('Ends with a ?:', s.endswith('?'))
 print('Ends with a ?:', s[-1] == '?')
-print('Has a ?:', '?' in s)
 
 print('Snake case:', s.lower().replace(' ', '_'))
 

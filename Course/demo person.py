@@ -1,0 +1,23 @@
+
+class Person:
+
+    def __init__(self, name, residence):
+        self.name = name
+        self.residence = residence
+
+    def tell(self):
+        print(f'I am {self.name} and I live in {self.residence}.')
+
+    def move(self, new_residence):
+        self.residence = new_residence
+
+
+# -------------------------------------------
+
+p1 = Person('Peter', 'Lhee')
+
+p1.tell()
+p1.move('Amsterdam')
+
+p1.tell()
+Person.tell(p1)
