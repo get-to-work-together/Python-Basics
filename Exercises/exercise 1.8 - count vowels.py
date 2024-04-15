@@ -23,6 +23,8 @@ print("Found the vowel 'y' %d times" % number_of_y)
 
 print("Total number of characters: %d" % len(s))
 
+print("Total number of non-whitespace characters: %d" % len(s.replace(' ', '')))
+
 print("Total number of vowels: %d" % number_of_vowels)
 
 

@@ -1,3 +1,5 @@
-name = 'Guido'
+print('Hello world!')
 
-print(name)
+
+name = input('Waht is your name? ')
+print('Hello ' + name)
