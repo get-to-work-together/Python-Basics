@@ -1,4 +1,6 @@
-"""Leinnix approximation of PI"""
+"""Leibniz approximation of PI"""
+
+import math
 
 n = 10000000
 
@@ -13,9 +15,14 @@ for i in range(1, n, 2):
 
 pi = total * 4
 
-print('Leibniz approximation of Pi =', pi)
+print(f'Leibniz approximation of Pi = {pi}')
 
+print(f'The math library has Pi = {math.pi}')
 
+d = abs(pi - math.pi)
+precentage = d / math.pi * 100
+
+print(f'This is accurate to {100 - precentage}%')
 
 
 

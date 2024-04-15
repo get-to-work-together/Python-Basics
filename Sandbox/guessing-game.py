@@ -1,11 +1,11 @@
 import random
 
-lower = 1
-upper = 100
+LOWER = 1
+UPPER = 100
 
-magic_number = random.randint(lower, upper)
+magic_number = random.randint(LOWER, UPPER)
 
-print('Guess a number between %d and %d' % (lower, upper))
+print('Guess a number between %d and %d' % (LOWER, UPPER))
 
 number_of_guesses = 0
 while True:
