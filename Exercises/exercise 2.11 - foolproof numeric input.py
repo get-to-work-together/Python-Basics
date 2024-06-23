@@ -1,5 +1,5 @@
 
-def foolproof_input(prompt, lower, upper):
+def foolproof_input(prompt: str, lower: int, upper: int) -> int:
 
     while True:
         try:
@@ -16,14 +16,16 @@ def foolproof_input(prompt, lower, upper):
 
         except KeyboardInterrupt:
             print('\nOK. Stoping now.')
-            break
+            exit()
 
 
 # ----------------------------------------------------------------
 
 if __name__ == '__main__':
 
-    number = foolproof_input('Give me a number between 1 and 10: ', 1, 10)
+    lower = 1
+    upper = 10
+    number = foolproof_input(f'Give me a number between {lower} and {upper}: ', lower, upper)
 
     if number is not None:
         print('The number you entered (%d) is OK' % number)

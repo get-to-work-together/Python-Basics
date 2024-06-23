@@ -11,6 +11,8 @@ print(root)
 
 # for e1 in root:
 #     print(e1.tag)
+#
+#
 
 # for e1 in root:
 #     print(e1.tag)
@@ -18,6 +20,8 @@ print(root)
 #         print('   ', e2.tag)
 #         for e3 in e2:
 #             print('       ', e3.tag)
+
+
 
 print('\n------ PLAY TITLE -------------------------------------\n')
 
@@ -36,7 +40,7 @@ scenes = root.findall('.//SCENE/TITLE')
 for s in scenes:
     print(s.text)
 
-sys.exit()
+exit()
 
 
 print('\n------ SPEECHES BY DUNCAN -------------------------\n')

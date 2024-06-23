@@ -1,3 +1,5 @@
+import random
+
 lower = 1
 upper = 100
 
@@ -5,7 +7,8 @@ print(f'I will try to guess a number between {lower} and {upper}')
 
 number_of_guesses = 0
 while True:
-    guess = (lower + upper) // 2
+    # guess = (lower + upper) // 2
+    guess = random.randint(lower, upper)
 
     response = input(f'Is your number {guess}? [higher, lower, yes] : ').lower()
     number_of_guesses += 1

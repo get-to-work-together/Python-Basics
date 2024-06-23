@@ -1,7 +1,6 @@
 
 class BankAccount(object):
-
-    __slots__ = ('_holder', '_number', '_balance')
+    """Simple BankAccount class"""
 
     currency = '€'
 
@@ -11,7 +10,10 @@ class BankAccount(object):
         self._balance = balance
 
     def withdraw(self, amount):
-        self._balance -= amount
+        if amount <= self._balance:
+            self._balance -= amount
+        else:
+            raise Exception('Not enough credit!')
 
     def deposit(self, amount):
         self._balance += amount
@@ -19,51 +21,42 @@ class BankAccount(object):
     def info(self):
         return f'BankAccount with number {self._number}'\
                f' belongs to {self._holder}'\
-               f' has a balance of {BankAccount.currency}{self._balance}.'
-
-    @classmethod
-    def change_currency(cls, new_currency):
-        cls.currency = new_currency
-
+               f' and has a balance of {BankAccount.currency}{self._balance}.'
 
 
 class SavingsAccount(BankAccount):
 
-    def __init__(self, holder, number, balance = 0, interest = 0):
-        super().__init__(self, holder, number, balance)
+    def __init__(self, holder, number, balance = 0, interest = 10):
+        super().__init__(holder, number, balance)
         self._interest = interest
 
     def info(self):
         return f'SavingsAccount with number {self._number}'\
                f' belongs to {self._holder}'\
-               f' has a balance of {SavingsAccount.currency}{self._balance}.'\
-               f' Interest rate = {self._interest}%'
+               f' and has a balance of €{self._balance:.2f}.'
 
-    def add_interest(self, years):
-        self._balance *= self._balance * self._interest / 100 * years
-        
-    @staticmethod
-    def calculate_interest(amount, interest):
-        return amount + amount * interest / 100
+    def add_interest(self):
+        self._balance += (self._interest / 100) * self._balance
 
 
 # -------------------------------------------------
 
-acc1 = SavingsAccount('Peter', 'NL99ABCD0121234658', interest = 2.8)
+if __name__ == '__main__':
 
-BankAccount.change_currency('$')
+    acc1 = SavingsAccount('Peter', 'NL99ABCD0121234658')
 
-print(acc1.info())
+    print(acc1.info())
 
-acc1.deposit(1000)
-acc1.withdraw(231)
-acc1.withdraw(20)
-acc1.withdraw(100)
+    acc1.deposit(1000)
+    acc1.withdraw(231)
+    acc1.withdraw(20)
+    acc1.withdraw(100)
 
-print(acc1.info())
+    acc1.add_interest()
+    acc1.add_interest()
+    acc1.add_interest()
+    acc1.add_interest()
 
-acc1.add_interest(2)
-
-print(acc1.info())
+    print(acc1.info())
 
 

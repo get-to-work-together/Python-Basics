@@ -171,7 +171,7 @@ if __name__ == '__main__':
     # GuessingGameAutoPlayer(strategy = GuessingGameAutoPlayer.guess_power_of_two).play()
 
     random_state = random.randint(1, 100000)
-    # simulation(strategy = GuessingGameAutoPlayer.guess_random_between, random_state = random_state)
-    simulation(strategy=GuessingGameAutoPlayer.guess_middle, random_state=random_state)
+    simulation(strategy = GuessingGameAutoPlayer.guess_random_between, random_state = random_state)
+    # simulation(strategy=GuessingGameAutoPlayer.guess_middle, random_state=random_state)
     # simulation(strategy = GuessingGameAutoPlayer.guess_first_64_then_middle, random_state = random_state)
     # simulation(strategy = GuessingGameAutoPlayer.guess_power_of_two, random_state = random_state)

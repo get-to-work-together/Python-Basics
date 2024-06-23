@@ -1,20 +1,20 @@
 import os
+import re
+
 print('Current working directory', os.getcwd())
 
-filename = 'data.txt'
-# filename = '/Users/peter/Computrain/_InCompany/ASML/Python Basics/Sandbox/data.txt'
+filename_in = 'data.txt'
+filename_out = 'data_out.txt'
 
+try:
+    with open(filename_in, mode='r') as f_in:
+        with open(filename_out, mode='w') as f_out:
 
-with open(filename, mode='r') as f:
+            for i, line in enumerate(f_in, start = 1):
+                line = line.strip()
+                if re.search(r'\w+@\w+\.\w{2,3}', line):
+                    print(i, line)
+                    print(i, line, file = f_out)
 
-    for line in f:
-        line = line.strip()
-        if 'and' in line:
-            print(line)
-
-
-with open('demo.txt', mode = 'w') as f:
-
-    f.write('This is my first line\n')
-
-    print('And this is the second', file = f)
+except FileNotFoundError:
+    print(f'Cannot find file {filename_in}')

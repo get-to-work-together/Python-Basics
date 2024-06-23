@@ -1,25 +1,33 @@
 
-def frange(start, stop, step=1.0, endpoint=False):
-    numbers = []
-    number = start
+def frange(start: int|float, stop: int|float, step: int|float=1.0, endpoint:bool=False):
+
+    def to_significant_digits(x, n_significant = 10):
+        format_string = '{:.%dg}' % n_significant
+        return float(format_string.format(x))
+
+    number = to_significant_digits(start)
+    yield number
     while True:
-        numbers.append(number)
-        number = round(number + step, 12)
+        number = to_significant_digits(number + step)
         if endpoint:
             if number > stop:
                 break
         else:
             if number >= stop:
                 break
-    return numbers
+        yield number
+
+
+
+
 
 
 if __name__ == '__main__':
 
-    print(frange(1, 10))
-    print(frange(1, 10, endpoint = True))
-    print(frange(1, 2, 0.1))
-
+    print(list(frange(1, 10)))
+    print(list(frange(1, 10, endpoint = True)))
+    print(list(frange(1, 2, 0.1)))
+    print(list(frange(1e-23, 2e-23, 0.125e-23)))
 
 
 
