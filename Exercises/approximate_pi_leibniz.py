@@ -2,15 +2,15 @@
 
 import math
 
-n = 10000000
+n = 100_000_000
 
 total = 0.0
 add_or_subtract = True
 for i in range(1, n, 2):
     if add_or_subtract:
-        total = total + 1/i
+        total += 1/i
     else:
-        total = total - 1/i
+        total -= 1/i
     add_or_subtract = not add_or_subtract
 
 pi = total * 4
@@ -24,7 +24,10 @@ precentage = d / math.pi * 100
 
 print(f'This is accurate to {100 - precentage}%')
 
+# print(d, math.log(d, 10), int(-math.log(d, 10)))
 
+accurate_decimals = int(-math.log(d, 10))
+print(f'Accurate to {accurate_decimals} decimals')
 
 
 

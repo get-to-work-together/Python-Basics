@@ -4,7 +4,7 @@ from __future__ import print_function      # for 2.7 users
 
 print('Hello world')
 
-name = input('What\'s your name? ')        # in 2.7 use raw_input(...)
+name = input('What is your name? ')        # in 2.7 use raw_input(...)
 
 print('Hello ' + name)
 

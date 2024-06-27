@@ -40,11 +40,20 @@ if __name__ == '__main__':
     v1 = Vector(3, 4)
     v2 = Vector(-1, 1)
 
-    print(v1)
-    print(v2)
+    print(f'v1 = {v1}')
+    print(f'v2 = {v2}')
 
     v3 = v1 + v2
 
-    print(v3)
+    print(v1)
 
-    print(v3.length())
+    print(f'v1 + v2 = {v3}')
+
+    print(f'length = {v3.length()}')
+
+    if v1 > v2:
+        print('v1 is longer')
+    elif v2 > v1:
+        print('v2 is longer')
+    else:
+        print('v1 and v2 are equal')

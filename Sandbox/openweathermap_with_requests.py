@@ -14,10 +14,10 @@ print(url)
 
 try:
     response = requests.get(url)
+    print(type(response))
 
 except Exception as err:
     print("Cannot connect to " + url)
-    print(err)
 
 else:
     if (response.status_code == 200):

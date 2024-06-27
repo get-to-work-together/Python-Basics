@@ -1,15 +1,35 @@
 
-while True:
-    try:
-        number = int(input('give a number: '))
+class MyInvalidArgumentError(Exception):
+    pass
 
-        print(number)
-        print(10/number)
 
-        break
+def calculate_area(width, height):
 
-    except ValueError:
-        print('That is not a number, mom!')
+    if width < 0 or height < 0:
+        raise MyInvalidArgumentError('Negative argument')
 
-    except ZeroDivisionError:
-        print('Cannot divide by 0')
+    # or
+
+    assert width >= 0 and height >= 0, 'Negative argument'
+
+    return width * height
+
+# ---------------------------
+
+try:
+    # open database
+    area = calculate_area(10, -2)
+    print(area)
+
+except AssertionError as err:
+    print(err)
+
+except MyInvalidArgumentError:
+    print('My bussiness rules have been violated!')
+
+else:
+    print('Everything went well!')
+
+finally:
+    # close database
+    print('Always executed!')

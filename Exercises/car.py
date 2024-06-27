@@ -4,7 +4,7 @@ class Car:
     VOLUME_UNIT = 'l'
     number_of_cars = 0
 
-    def __init__(self, make, model, color, mileage = 0, usage = None):
+    def __init__(self, make:str, model:str, color:str, mileage:int = 0, usage:int = 20):
         self._make = make
         self._model = model
         self._color = color
@@ -18,10 +18,10 @@ class Car:
         print('Your car has been demolished.')
         Car.number_of_cars -= 1
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'{self._color} {self._make} {self._model} mileage: {self._mileage}{Car.DISTANCE_UNITS}. Tank {self._tank:.1f}{Car.VOLUME_UNIT}.'
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Car('{self._make}', '{self._model}', '{self._color}')"
 
     def info(self):
@@ -29,7 +29,7 @@ class Car:
         if self._started:
             print( f'The engine is still running.')
 
-    def drive(self, km):
+    def drive(self, km:int):
         if self._started:
             self._mileage += km
             print(f'Driving {km}{Car.DISTANCE_UNITS}.')
@@ -41,7 +41,7 @@ class Car:
         else:
             print('Please start your car first.')
 
-    def calculate_amount_of_gas(self, number_of_kilometers):
+    def calculate_amount_of_gas(self, number_of_kilometers: int) -> float:
         return number_of_kilometers / self._usage
 
     def fill_up(self):
@@ -61,6 +61,7 @@ class Car:
     def get_number_of_cars(cls):
         return cls.number_of_cars
 
+
 # -------------------------------------------------------
 
 if __name__ == '__main__':
@@ -75,7 +76,7 @@ if __name__ == '__main__':
     my_car.info()
     print(my_car)
 
-    my_car = Car('Volkswagen', 'Kever', 'white', mileage = 100000, usage = 21)
+    my_car = Car('Volkswagen', 'Kever', 'white', usage = 21)
 
     print( str(my_car) )
     print( repr(my_car) )
@@ -83,3 +84,5 @@ if __name__ == '__main__':
     your_car = Car('Volkswagen', 'Kever', 'white', mileage = 100000, usage = 21)
 
     print( Car.get_number_of_cars() )
+
+    del my_car

@@ -2,9 +2,9 @@ import random
 import string
 
 minimum_length = 8
-n_lowercase = 1
-n_uppercase = 1
-n_numbers = 1
+n_lowercase = 3
+n_uppercase = 3
+n_numbers = 2
 n_special = 1
 n_extra = max(0, minimum_length - n_lowercase - n_uppercase - n_numbers - n_special)
 

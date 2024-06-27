@@ -56,19 +56,18 @@ class Logging:
         print('History')
         print(self._history)
 
-class SavingsAccount(BankAccount, Logging):
 
-    def __init__(self, number: str, holder: str, balance: int = 0, interest_rate = 10):
-        BankAccount.__init__(self, number, holder, balance)
+class SavingsAccount(BankAccount, Logging):
+    def __init__(self, number: str, holder: str, balance: int = 0, interest_rate=0.5):
+        BankAccount.__init__(number, holder, balance)
         Logging.__init__(self)
-        self._interrest_rate = interest_rate
+        self._interest_rate = interest_rate
 
     def info(self):
-        return f'SavingsAccount ({self._interrest_rate}%) with number {self._number} belongs to {self._holder} has a balance of {BankAccount.currency}{self._balance}.'
+        return f'SavingsAccount with number {self._number} belongs to {self._holder} has a balance of {BankAccount.currency}{self._balance}.'
 
     def add_interest(self):
-        self._balance += self._balance * self._interrest_rate / 100
-        self.log('Added interest')
+        self._balance += self._interest_rate / 100 * self._balance
 
 class BirthdayAccount(SavingsAccount):
     pass
@@ -95,7 +94,7 @@ print(repr(acc1))
 
 del acc1
 
-acc2 = SavingsAccount("NL99ABCD0121234658", "Peter", 649)
+acc2 = SavingsAccount("NL99ABCD0121234658", "Peter", 649, interest_rate=2.0)
 print(str(acc2))
 print(acc2.info())
 
@@ -103,4 +102,4 @@ acc2.add_interest()
 
 print(acc2.info())
 
-print(acc2.show())
+# print(acc2.show())

@@ -1,9 +1,9 @@
 import sys
 
-filename = 'demo_open.txtX'
+filename = 'demo_open.txt'
 
-try:
-    with open(filename) as f:
+with open(filename) as f:
+    with open('output.txt', 'w') as f_out:
 
         headers = f.readline().rstrip('\n').split(',')
 
@@ -14,9 +14,9 @@ try:
             d = dict(zip(headers, columns))
 
             if d['ID'] == '1003':
-                print(f'{linenr:3}:{line}')
+                print(f'{linenr:3}: {line}')
 
-except FileNotFoundError:
-    print(f'Can not find file: {filename}')
-    sys.exit(-1)
-    
+                print(f'{linenr:3}: {line}', file=f_out)
+                f_out.write(f'{linenr:3}: {line}\n')
+
+

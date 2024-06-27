@@ -1,9 +1,14 @@
 
-def foolproof_input(prompt: str, lower: int, upper: int) -> int:
+def foolproof_input(prompt, lower, upper):
 
     while True:
         try:
             response = input(prompt)
+
+            if response == '':
+                print('Nothing was entered.')
+                continue
+
             number = int(response)
 
             if lower <= number <= upper:
@@ -16,7 +21,7 @@ def foolproof_input(prompt: str, lower: int, upper: int) -> int:
 
         except KeyboardInterrupt:
             print('\nOK. Stoping now.')
-            exit()
+            return
 
 
 # ----------------------------------------------------------------
