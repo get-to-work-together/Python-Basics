@@ -1,7 +1,7 @@
 gender = 'm'
 age = 43
 
-if gender == 'm':
+if gender == 'm':
     if age < 21:
         print('boy')
     else:
