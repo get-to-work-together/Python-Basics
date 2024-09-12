@@ -6,7 +6,10 @@ def banner(text):
     print('***' + '*' * n + '***')
 
 
-def banner(text, c = '*'):
+
+
+
+def banner(text: str, c: str = '*'):
     """Print the text as a banner"""
     n = len(text)
     print(c * (n + 6))

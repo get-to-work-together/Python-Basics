@@ -1,8 +1,9 @@
 
 class Vector:
+    """My Vector class which also supports vector addition"""
 
     def __init__(self, x, y):
-        self._x = x
+        self._x = x         # set _x attribute
         self._y = y
 
     def __str__(self):
@@ -12,6 +13,7 @@ class Vector:
         return Vector(self._x + other._x, self._y + other._y)
 
     def length(self):
+        """Calculate the langth using pythagoras"""
         return (self._x ** 2 + self._y ** 2) ** 0.5
 
     def __lt__(self, other):

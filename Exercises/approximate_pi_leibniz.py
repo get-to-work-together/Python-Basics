@@ -2,7 +2,7 @@
 
 import math
 
-n = 100_000_000
+n = 10_000_000
 
 total = 0.0
 add_or_subtract = True
@@ -17,7 +17,10 @@ pi = total * 4
 
 print(f'Leibniz approximation of Pi = {pi}')
 
-print(f'The math library has Pi = {math.pi}')
+print(f'The math library has     Pi = {math.pi}')
+
+
+
 
 d = abs(pi - math.pi)
 precentage = d / math.pi * 100

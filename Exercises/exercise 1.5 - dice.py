@@ -13,6 +13,27 @@ print('Total', total)
 
 
 
+dice = []
+for _ in range(5):
+    dice.append(random.randint(1, 6))
+print('Thrown', dice)
+print('Total', sum(dice))
+
+
+
+dice = [random.randint(1, 6) for _ in range(5)]
+print('Thrown', dice)
+print('Total', sum(dice))
+
+
+
+print('Thrown', end=' ')
+total = 0
+for i in range(5):
+    d = random.randint(1, 6)
+    total += d
+    print(d, end=' ')
+print('\nTotal', total)
 
 
 
@@ -35,24 +56,24 @@ print('Total', total)
 
 
 
+
+
+
+
+
+
+# dices = []
+# for _ in range(5):
+#     dices.append(random.randint(1, 6))
+#
+# print('Thrown', dices)
+# print('Total', sum(dices))
 
 
 # dices = random.choices(range(1, 7), k = 5)
 #
 # print('Thrown', dices)
 # print('Total', sum(dices))
-
-
-
-
-dices = []
-for _ in range(5):
-    dices.append(random.randint(1, 6))
-
-print('Thrown', dices)
-print('Total', sum(dices))
-
-
 
 
 # dices = [random.randint(1, 6) for _ in range(5)]

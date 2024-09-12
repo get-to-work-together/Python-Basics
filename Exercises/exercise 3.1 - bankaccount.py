@@ -1,17 +1,8 @@
 class BankAccount:
 
-    # class wide attribute
-    __slots__ = ['_holder', '_number', '_balance']
-    last_number = 875346
-    currency = '$'
-
-    def __init__(self, number=None, holder=None, balance = 0):
-        BankAccount.last_number += 1
+    def __init__(self, number, holder, balance = 0):
+        self._number = number
         self._holder = holder
-        if number:
-            self._number = number
-        else:
-            self._number = BankAccount.last_number
         self._balance = balance
 
     def withdraw(self, amount):
@@ -21,22 +12,15 @@ class BankAccount:
         self._balance += amount
 
     def get_info(self):
-        return f'Bankaccount with number {self._number} belongs to {self._holder} has a balance of {BankAccount.currency}{self._balance}.'
+        return f'Bankaccount with number {self._number} belongs to {self._holder} has a balance of €{self._balance}.'
 
-    @staticmethod
-    def change_currency(new_currency):
-        BankAccount.currency = new_currency
-
-    @classmethod
-    def change_currency(cls, new_currency):
-        cls.currency = new_currency
 
 # ---------------------------------------------------------
 
 if __name__ == '__main__':
 
-    acc1 = BankAccount(holder = 'Peter')
-    acc2 = BankAccount(holder = 'Guido', balance = 1000)
+    acc1 = BankAccount('NL23ABCD0345673456', 'Peter')
+    acc2 = BankAccount('NL12ABCD9283740029', 'Guido', balance = 1000)
 
     print(acc1.get_info())
     print(acc2.get_info())

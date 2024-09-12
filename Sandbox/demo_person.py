@@ -1,55 +1,49 @@
 
 class Person:
 
-    __slots__ = ('name', 'residence')
-
-    def __init__(self, name, residence = 'unknown'):
+    # initializing attributes
+    def __init__(self, name, residence):
         self.name = name
         self.residence = residence
 
-    def __str__(self):
-        return f'I am {self.name}. I am a Person.'
-
-    def __repr__(self):
-        return f'Person()'
-
+    # methods
     def tell(self):
-        return f'I am {self.name} and I live in {self.residence}'
+        print(f'I am {self.name} and I live in {self.residence}')
 
     def move(self, new_residence):
         self.residence = new_residence
 
-class Student(Person):
 
-    def __init__(self, name, residence, school):
-        super().__init__(name, residence)
-        self.school = school
+class Customer(Person):
 
+    # initializing attributes
+    def __init__(self, name, customernr):
+        super().__init__(name, 'unknown')
+        self.customernr = customernr
+
+    #overriding
     def tell(self):
-        return f'I am {self.name}. I am a student at {self.school} and live in {self.residence}'
+        print(f'I am customer {self.name}. My number is {self.customernr}')
 
 
-# -------------------------------
+# -------------------------------------------------------
 
-# Instantiation - creating an object
-p1 = Person('Peter', 'Lhee')
+# instantiation
+p1 = Person('Peter', 'Amsterdam')
+p2 = Person('Kim', 'Delft')
 
-p2 = Person('Ying Hsuan')
+cust1 = Customer('Saskia', 'VIP3457')
 
-print(p1.tell())
-print(Person.tell(p1))
+# call method
+p1.tell()
+p2.tell()
 
-print(p2.tell())
+p1.move('Eindhoven')
 
-#
-#
-# p1.move('Eindhoven')
-# print(p1.tell())
+p1.tell()
+p2.tell()
 
-print(p1)
-print(str(p1))
+cust1.tell()
 
-student1 = Student('Jaenette', 'Veldhoven', 'TU Eindhoven')
-print(student1.tell())
-student1.move('Amsterdam')
-print(student1.tell())
+cust1.log('Started')
+

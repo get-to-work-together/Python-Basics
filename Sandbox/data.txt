@@ -1,0 +1,127 @@
+total 1792
+drwxr-xr-x  126 peter  staff    4032 11 sep 10:23 .
+drwxr-xr-x   12 peter  staff     384 11 sep 09:58 ..
+-rw-r--r--@   1 peter  staff    6148 18 jan  2024 .DS_Store
+drwxr-xr-x   10 peter  staff     320 22 mrt  2022 .idea
+drwxr-xr-x   10 peter  staff     320 20 mrt 21:14 .ipynb_checkpoints
+-rwxr-xr-x    1 peter  staff   60645 18 jan  2024 Demo SciPy FFT.ipynb
+-rwxr-xr-x@   1 peter  staff   36650  3 jun  2021 SciPy - Interpolation.ipynb
+-rwxr-xr-x    1 peter  staff   20372  3 jun  2021 SciPy - Linear regression.ipynb
+drwxr-xr-x    9 peter  staff     288 10 sep 15:19 __pycache__
+-rw-r--r--    1 peter  staff     245 19 jan  2023 append_to_file.py
+-rw-r--r--    1 peter  staff     332 16 jan  2024 banner.py
+-rw-r--r--    1 peter  staff     155 29 mrt  2022 break continue.py
+-rwxr-xr-x@   1 peter  staff   78140 17 jan  2024 ca-500.csv
+-rw-r--r--@   1 peter  staff   15866  6 okt  2023 ca-500.ipynb
+-rw-r--r--    1 peter  staff     266 28 mrt  2022 circle.py
+-rw-r--r--    1 peter  staff     808 24 mrt  2021 class_glass.py
+-rw-r--r--    1 peter  staff     865 28 mrt  2022 count_vowels.py
+-rw-r--r--    1 peter  staff     701  1 jun  2021 count_words.py
+-rw-r--r--    1 peter  staff       0 11 sep 10:23 data.txt
+-rwxr-xr-x@   1 peter  staff     448 27 jun 14:44 demo beautifulsoup.py
+-rw-r--r--    1 peter  staff     209 17 jan  2023 demo datastructures.py
+-rw-r--r--    1 peter  staff     224 20 okt  2022 demo enum.py
+-rw-r--r--    1 peter  staff      92 23 mrt  2023 demo for.py
+-rw-r--r--    1 peter  staff     102 23 mrt  2023 demo functions.py
+-rw-r--r--    1 peter  staff     184 17 jan  2023 demo grafiek.py
+-rw-r--r--    1 peter  staff     299  2 okt  2023 demo if.py
+-rw-r--r--@   1 peter  staff     192 24 jun 15:14 demo indent.py
+-rw-r--r--    1 peter  staff     141 20 okt  2022 demo match
+-rw-r--r--    1 peter  staff   74733 20 okt  2022 demo numpy.ipynb
+-rw-r--r--    1 peter  staff     459  1 jul  2022 demo numpy.py
+-rw-r--r--    1 peter  staff     697 23 mrt  2022 demo open.py
+-rw-r--r--    1 peter  staff      62 19 okt  2022 demo random.py
+-rw-r--r--    1 peter  staff     249  6 apr  2023 demo read_csv.py
+-rw-r--r--    1 peter  staff     403  1 jul  2022 demo requests.py
+-rw-r--r--@   1 peter  staff     312 28 mrt  2022 demo strings.py
+-rw-r--r--    1 peter  staff     452 30 mrt  2022 demo turtle.py
+-rw-r--r--    1 peter  staff     964  1 mrt  2023 demo vector.py
+-rw-r--r--@   1 peter  staff      41 27 jun 14:31 demo.py
+-rw-r--r--@   1 peter  staff     373 25 jun 15:00 demo_airport.py
+-rw-r--r--@   1 peter  staff     151  1 jun  2023 demo_args.py
+-rw-r--r--@   1 peter  staff     146 11 sep 09:52 demo_arguments.py
+-rw-r--r--    1 peter  staff     313 24 mrt  2022 demo_datetime.py
+-rw-r--r--    1 peter  staff     363 24 jun  2022 demo_dicts.py
+-rw-r--r--@   1 peter  staff     254 26 jun 16:18 demo_doctest.py
+-rw-r--r--    1 peter  staff     413  2 jun  2021 demo_errors.py
+-rw-r--r--@   1 peter  staff     616 26 jun 10:29 demo_exceptions.py
+-rw-r--r--    1 peter  staff     308 24 mrt  2021 demo_first_class.py
+-rw-r--r--@   1 peter  staff     111 10 sep 10:23 demo_for.py
+-rw-r--r--@   1 peter  staff     311 10 sep 15:12 demo_functions.py
+-rw-r--r--@   1 peter  staff      93  1 jun  2023 demo_global.py
+-rw-r--r--    1 peter  staff     177 22 mrt  2022 demo_if.py
+-rw-r--r--    1 peter  staff     363 24 mrt  2021 demo_index.py
+-rw-r--r--@   1 peter  staff     707 31 mei  2023 demo_lists.py
+-rwxr-xr-x    1 peter  staff     717 18 jan  2024 demo_logging.py
+-rw-r--r--    1 peter  staff      96  2 okt  2023 demo_looping.py
+-rw-r--r--    1 peter  staff      51 22 mrt  2023 demo_math.py
+-rw-r--r--    1 peter  staff     421  2 jun  2021 demo_mathematics.py
+-rw-r--r--    1 peter  staff    2546  6 apr  2023 demo_matplotlib.py
+-rw-r--r--    1 peter  staff     339  3 jun  2021 demo_numpy.py
+-rw-r--r--    1 peter  staff     480 17 jan  2024 demo_oo.py
+-rw-r--r--    1 peter  staff     439 18 okt  2022 demo_open.py
+-rw-r--r--@   1 peter  staff     195 14 mrt 12:08 demo_pandas.py
+-rw-r--r--    1 peter  staff    1115  1 mrt  2023 demo_person.py
+-rw-r--r--@   1 peter  staff     848  1 jun  2023 demo_read.py
+-rw-r--r--@   1 peter  staff     709  5 okt  2023 demo_requests.py
+-rw-r--r--    1 peter  staff     532 24 mrt  2021 demo_sorted.py
+-rw-r--r--    1 peter  staff      88 22 mrt  2023 demo_statistics.py
+-rw-r--r--    1 peter  staff     207 16 jan  2023 demo_string_formating.py
+-rw-r--r--    1 peter  staff     306  5 apr  2023 demo_threading.py
+-rw-r--r--@   1 peter  staff      24  9 sep 10:24 demo_type_hinting.py
+-rw-r--r--    1 peter  staff     621 18 jan  2024 demo_unittest.py
+-rw-r--r--    1 peter  staff     341 25 mrt  2021 demo_urllib.py
+-rw-r--r--@   1 peter  staff     338  1 jun  2023 demo_vector.py
+drwxr-xr-x@   6 peter  staff     192 27 jun 14:20 demos numpy
+drwxr-xr-x@   2 peter  staff      64 31 okt  2019 demos pandas
+drwxr-xr-x@   4 peter  staff     128 30 jun  2022 demos qt
+drwxr-xr-x@  11 peter  staff     352 27 jun 14:19 demos timeit
+drwxr-xr-x@  13 peter  staff     416 27 jun 14:13 demos tkinter
+drwxr-xr-x@   4 peter  staff     128 26 jun 16:13 demos xml
+-rw-r--r--    1 peter  staff     302  2 jun  2021 drange.py
+-rw-r--r--@   1 peter  staff  128009 25 mrt  2021 earthquakes.json
+-rw-r--r--    1 peter  staff     298 25 mrt  2021 earthquakes.py
+-rw-r--r--    1 peter  staff     207  1 jun  2021 entered_names.py
+-rw-r--r--    1 peter  staff     215  6 apr  2023 fibbonaci_recursive.py
+-rw-r--r--@   1 peter  staff      47  9 sep 11:07 first.py
+-rw-r--r--    1 peter  staff     517 23 mrt  2023 functions.py
+-rw-r--r--    1 peter  staff    1443 22 mrt  2022 generate_password_function.py
+-rw-r--r--@   1 peter  staff     261 24 jun 14:47 group_parse.py
+-rwxr-xr-x@   1 peter  staff     756  9 sep 16:03 guessing-game-player.py
+-rwxr-xr-x    1 peter  staff     522 15 apr 15:19 guessing-game.py
+-rw-r--r--@   1 peter  staff    5709  9 sep 15:43 guessing_game_simulation.py
+-rw-r--r--@   1 peter  staff      87 27 jun 14:30 hello.py
+-rw-r--r--@   1 peter  staff     242 27 jun 14:45 if.py
+-rw-r--r--    1 peter  staff    8498 21 mrt 15:01 interpolation 3d.ipynb
+-rw-r--r--    1 peter  staff     500 29 mrt  2022 leapyear.py
+-rw-r--r--@   1 peter  staff     384 22 mrt  2022 min_max.py
+-rw-r--r--    1 peter  staff      11 20 jan  2023 my_custom_styles.css
+-rw-r--r--    1 peter  staff     504 29 mrt  2022 my_function_library.py
+-rw-r--r--@   1 peter  staff     344 10 sep 15:20 my_functions.py
+-rw-r--r--@   1 peter  staff      70  2 jun  2023 my_random.py
+-rw-r--r--@   1 peter  staff     359 24 jun 14:03 name_and_age.py
+-rw-r--r--@   1 peter  staff     784 24 mrt  2021 occurance_of_words.py
+-rw-r--r--    1 peter  staff     426  2 mrt  2023 openweathermap.py
+-rwxr-xr-x@   1 peter  staff     858 27 jun 10:03 openweathermap_with_requests.py
+-rw-r--r--    1 peter  staff     128  3 jun  2021 pandas_ca_500.py
+-rw-r--r--@   1 peter  staff     905 31 mei  2021 password.py
+-rw-r--r--@   1 peter  staff     992 17 jan  2024 person.py
+-rw-r--r--    1 peter  staff     729 20 jan  2023 person_module.py
+-rw-r--r--    1 peter  staff     496 23 mrt  2021 playing_cards.py
+-rw-r--r--    1 peter  staff     634 17 jan  2023 random_password.py
+-rw-r--r--@   1 peter  staff     402 11 sep 10:13 read_ca500.py
+-rw-r--r--@   1 peter  staff     357 19 dec  2023 read_csv_pandas.py
+-rw-r--r--    1 peter  staff   36417 19 dec  2023 read_csv_with_pandas.ipynb
+-rw-r--r--    1 peter  staff     533 17 jan  2024 read_data.py
+-rw-r--r--@   1 peter  staff     649 19 dec  2023 read_file.py
+-rw-r--r--@   1 peter  staff     311 19 dec  2023 read_file_with_csv.py
+-rw-r--r--    1 peter  staff     773 19 okt  2022 read_textfile.py
+-rw-r--r--    1 peter  staff     166 23 mrt  2022 read_with_pandas.py
+-rw-r--r--    1 peter  staff     588 17 jan  2023 read_words_in_file.py
+-rw-r--r--    1 peter  staff     143 16 jan  2024 use_banner.py
+-rw-r--r--@   1 peter  staff      71 10 sep 15:14 use_functions.py
+-rw-r--r--    1 peter  staff     122 30 jun  2022 using_car.py
+-rw-r--r--    1 peter  staff     128 22 mrt  2022 using_my_function.py
+-rw-r--r--    1 peter  staff      58 23 mrt  2023 variables.py
+-rwxr-xr-x    1 peter  staff    4593 24 mrt  2021 vectors_and_paths.py
+-rw-r--r--    1 peter  staff    2119 29 mrt  2022 words.py

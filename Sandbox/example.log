@@ -1,0 +1,9 @@
+2024-09-12T11:59:13.909 - root - ERROR - Watch out!
+2024-09-12T11:59:13.909 - root - CRITICAL - ERROR!!!!!
+2024-09-12T11:59:13.909 - root - ERROR - invalid literal for int() with base 10: 'one'
+2024-09-12T11:59:28.238 - root - ERROR - Watch out!
+2024-09-12T11:59:28.238 - root - CRITICAL - ERROR!!!!!
+2024-09-12T11:59:28.238 - root - ERROR - invalid literal for int() with base 10: 'one'
+2024-09-12T11:59:29.093 - root - ERROR - Watch out!
+2024-09-12T11:59:29.093 - root - CRITICAL - ERROR!!!!!
+2024-09-12T11:59:29.093 - root - ERROR - invalid literal for int() with base 10: 'one'

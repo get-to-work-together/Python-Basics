@@ -1,4 +1,4 @@
-sentence = 'this is a story about a couple of kids walking through the woods'
+sentence = 'abacadabra this is a story about a couple of kids walking through the woods'
 
 words = sentence.split()
 

@@ -1,5 +1,6 @@
 
-def foolproof_input(prompt, lower, upper):
+def foolproof_input(prompt:str, lower:int, upper:int) -> int|None:
+    """Ask the user to input a number between two bounds and correctly handle wromg input."""
 
     while True:
         try:
@@ -19,7 +20,7 @@ def foolproof_input(prompt, lower, upper):
         except ValueError:
             print(f'"{response}" is not a number.')
 
-        except KeyboardInterrupt:
+        except KeyboardInterrupt as ex:
             print('\nOK. Stoping now.')
             return
 
