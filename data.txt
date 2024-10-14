@@ -1,3 +1,0 @@
-line1 - peter
-line2 - Monica
-line3 - Arthur
