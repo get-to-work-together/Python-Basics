@@ -1,7 +1,7 @@
 import random
 import string
 
-minimum_length = 8
+minimum_length = 12
 n_lowercase = 3
 n_uppercase = 3
 n_numbers = 2

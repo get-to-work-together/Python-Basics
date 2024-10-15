@@ -1,6 +1,7 @@
 import random
 from timeit import timeit
 
+
 def function1():
     c = number in l
 
@@ -13,6 +14,7 @@ def function3():
 def function4():
     s2 = set(l)
     c = number in s2
+
 
 if __name__ == '__main__':
 

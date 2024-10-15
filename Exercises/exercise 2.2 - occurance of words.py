@@ -11,18 +11,20 @@ s = s.lower().translate(str.maketrans('áäâàéëêèíïìîóöôòúüûù'
                                       'aaaaeeeeiiiioooouuuu',
                                       string.punctuation))
 
+print(s)
+
 words = s.split()
+print(words)
 
 unique_words = set(words)
+print(unique_words)
 
 d = dict()
 for word in unique_words:
     d[word] = words.count(word)
+print(d)
 
-def get_second(t):
-    return t[1]
-
-for word, n in sorted(d.items(), key = get_second, reverse = True):
+for word, n in sorted(d.items()):
     print(f'{word:25}: {n:3} {"*" * n}')
 
 
