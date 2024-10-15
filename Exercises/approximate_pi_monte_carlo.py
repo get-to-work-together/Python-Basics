@@ -3,7 +3,7 @@
 import math
 import random
 
-n = 100_000_000
+n = 10_000_000
 
 n_shorter_than_1 = 0
 for _ in range(n):
@@ -26,9 +26,13 @@ precentage = d / math.pi * 100
 
 print(f'This is accurate to {100 - precentage}%')
 
-# print(d, math.log(d, 10), int(-math.log(d, 10)))
+for i, (d1, d2) in enumerate(zip(f'{pi:.20f}', f'{math.pi:.20f}')):
+    if d1 != d2:
+        break
 
-accurate_decimals = int(-math.log(d, 10))
+# accurate_decimals = int(-math.log(d, 10))
+accurate_decimals = i - 1   # i starts at 0 and also counts the decimal point
+
 print(f'Accurate to {accurate_decimals} decimals')
 
 

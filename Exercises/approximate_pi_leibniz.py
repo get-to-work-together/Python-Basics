@@ -2,7 +2,7 @@
 
 import math
 
-n = 10_000_000
+n = 3_000_000
 
 total = 0.0
 add_or_subtract = True
@@ -23,13 +23,19 @@ print(f'The math library has     Pi = {math.pi}')
 
 
 d = abs(pi - math.pi)
-precentage = d / math.pi * 100
+percentage = d / math.pi * 100
 
-print(f'This is accurate to {100 - precentage}%')
+print(f'This is accurate to {100 - percentage}%')
 
 # print(d, math.log(d, 10), int(-math.log(d, 10)))
 
-accurate_decimals = int(-math.log(d, 10))
+for i, (d1, d2) in enumerate(zip(f'{pi:.20f}', f'{math.pi:.20f}')):
+    if d1 != d2:
+        break
+
+# accurate_decimals = int(-math.log(d, 10))
+accurate_decimals = i - 1   # starts at 0 and do not count the decimal point
+
 print(f'Accurate to {accurate_decimals} decimals')
 
 

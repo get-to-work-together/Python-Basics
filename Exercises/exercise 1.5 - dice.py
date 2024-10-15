@@ -13,27 +13,6 @@ print('Total', total)
 
 
 
-dice = []
-for _ in range(5):
-    dice.append(random.randint(1, 6))
-print('Thrown', dice)
-print('Total', sum(dice))
-
-
-
-dice = [random.randint(1, 6) for _ in range(5)]
-print('Thrown', dice)
-print('Total', sum(dice))
-
-
-
-print('Thrown', end=' ')
-total = 0
-for i in range(5):
-    d = random.randint(1, 6)
-    total += d
-    print(d, end=' ')
-print('\nTotal', total)
 
 
 
@@ -53,12 +32,26 @@ print('\nTotal', total)
 
 
 
+# dice = []
+# for _ in range(5):
+#     dice.append(random.randint(1, 6))
+# print('Thrown', dice)
+# print('Total', sum(dice))
+
+
+# dice = [random.randint(1, 6) for _ in range(5)]
+# print('Thrown', dice)
+# print('Total', sum(dice))
 
 
 
-
-
-
+# print('Thrown', end=' ')
+# total = 0
+# for i in range(5):
+#     d = random.randint(1, 6)
+#     total += d
+#     print(d, end=' ')
+# print('\nTotal', total)
 
 
 
