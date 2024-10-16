@@ -1,10 +1,15 @@
 import random
 
-def generate_password(required_length = 8,
-                      n_lowercase = 0,
-                      n_uppercase = 0,
-                      n_numbers = 0,
-                      n_special = 0):
+def generate_password(required_length: int = 8,
+                      n_lowercase: int = 0,
+                      n_uppercase: int = 0,
+                      n_numbers: int = 0,
+                      n_special: int = 0) -> str:
+
+    """This is my superdooper password generator.
+
+    You can specify the number of characters.
+    """
 
     lowercase_characters = 'abcdefghijkmnopqrstuvwxyz'  # removed l
     uppercase_characters = 'ABCDEFGHJKLMNPQRSTUVWXYZ'  # removed I and O

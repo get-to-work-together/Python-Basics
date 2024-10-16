@@ -33,18 +33,21 @@ else:
     print(r.status_code)
 
 
-# with requests.Session() as session:
-#
-#     payload = {
-#         'j_username': username,
-#         'j_password': password,
-#         'CSRF_TOKEN': csrf_token
-#     }
-#
-#     # pass strict security check
-#     r = session.post(site_url + security_check_page, data = payload)
-#     print(r.status_code)
-#
+with requests.Session() as session:
+
+    payload = {
+        'j_username': username,
+        'j_password': password,
+        'CSRF_TOKEN': csrf_token
+    }
+
+    # pass strict security check
+    r = session.post(site_url + login_page, data = payload)
+    print(r.status_code)
+    # print(r.text)
+    with open('mcb.html', 'w') as f:
+        f.write(r.text)
+
 #     # login
 #     for description, product_url in products.items():
 #         print(description, site_url + product_url)
