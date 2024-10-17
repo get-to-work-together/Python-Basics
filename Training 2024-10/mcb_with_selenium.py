@@ -1,3 +1,10 @@
+"""
+Required:
+- webdriver chromedriver: https://developer.chrome.com/docs/chromedriver/downloads
+- python_selenium: pip install selenium
+
+"""
+
 import time
 from csv import DictWriter
 
@@ -40,6 +47,7 @@ button = driver.find_element(By.ID, "CybotCookiebotDialogBodyLevelButtonAccept")
 button.click()
 
 time.sleep(1)
+
 
 # ------------------------------------------------------------------------
 # Login
